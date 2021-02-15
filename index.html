@@ -248,11 +248,11 @@ html, body {min-height: 100vh;}
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: #FF9933;
   font-size: 25px;
   padding: 8px 12px;
   position: absolute;
-  bottom: -50px;
+  bottom: -40px;
   width: 100%;
   text-align: center;
 }
@@ -347,9 +347,16 @@ need test
 mobile devices. X - systems
  !-->
  <div align="center">
- <img width="50%" src="images/H2X4.svg">
+ <img width="50%" onload="fadeIn(this)" src="images/H2X4.svg" style="display:none;">
  </div>
- 
+ <img width="100%" onload="fadeIn(this)" src="images/h2x4.svg" style="display:none;">
+		<script>
+// this function must be defined in the global scope
+window.fadeIn = function(obj) {
+    $(obj).fadeIn(1000);
+}
+</script>
+
  <!--
 <div id="test">
     <div align="center">
@@ -452,7 +459,8 @@ function showSlides() {
 }
 </script>
 	
-	
+	<br>
+	<br>
 <div id="test2">	
 <div align="left">
 	<p style="color:#00FF00;font-size:25px;">
